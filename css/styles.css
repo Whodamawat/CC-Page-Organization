@@ -1,1 +1,231 @@
+body {
+font-family: Arial, sans-serif;
+line-height: 1.6;
+margin: 0;
+padding: 0;
+background-color: #f4f4f4;
+color: #333;
+}
+header {
+background: #f4f4f4;
+color: #000000;
+padding: 1rem 0;
+text-align: center;
+}
 
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px; /* Add some padding from the edge */
+}
+
+.logo {
+    width: 600px; /* Adjust size as needed */
+    height: auto;
+}
+
+nav a {
+    font-weight: bold; /* Makes the navigation links bold */
+    color: #000000; /* Ensures the links use the current text color */            
+    text-decoration: none; /* Optional: Removes underline from links */
+    margin: 0 15px; /* Adds horizontal spacing between links */
+}
+
+nav a:hover {
+    color: #0078d7; /* Optional: Change color on hover */
+}
+.shop-now-button {
+background-color: #ff0000; /* Red background */
+color: #ffffff; /* White text */
+padding: 0.5rem 1rem; /* Add padding for the button */
+text-decoration: none; /* Remove underline */
+border-radius: 5px; /* Rounded corners */
+font-weight: bold; /* Bold text */
+font-size: 1rem; /* Adjust font size */
+display: inline-block; /* Ensure it behaves like a button */
+text-align: center; /* Center the text */
+}
+
+.shop-now-button:hover {
+    background-color: #cc0000; /* Darker red on hover */
+}
+
+.cart-icon {
+    font-size: 1.5rem; /* Adjust size of the cart icon */
+    text-decoration: none; /* Removes underline */
+    color: #333; /* Adjust color */
+}
+
+.cart-icon:hover {
+    color: #0078d7; /* Optional: Change color on hover */
+}
+
+.taskbar {
+    width: 300px;
+    background-color: #f4f4f4;
+    border-left: 1px solid #ccc;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+.taskbar h2 {
+    margin-top: 0;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item button {
+    margin: 0 5px;
+}
+
+.cart-item span {
+    margin: 0 10px;
+}
+
+.cart-total {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+button {
+background-color: #007BFF; /* Blue background */
+color: white; /* White text */
+border: none; /* Remove border */
+border-radius: 5px; /* Rounded corners */
+padding: 5px 10px; /* Add padding */
+cursor: pointer; /* Pointer cursor on hover */
+font-size: 14px; /* Adjust font size */
+transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+button:active {
+    background-color: #003f7f; /* Even darker blue when clicked */
+}
+
+button:disabled {
+    background-color: #cccccc; /* Gray background for disabled buttons */
+    cursor: not-allowed; /* Not-allowed cursor for disabled buttons */
+}
+
+.trash-icon {
+color: #ff4d4d; /* Red color for the trash icon */
+font-size: 18px; /* Slightly larger size */
+cursor: pointer; /* Pointer cursor on hover */
+margin-left: 10px; /* Add spacing from other elements */
+transition: transform 0.2s ease, color 0.2s ease; /* Smooth hover effect */
+}
+
+.trash-icon:hover {
+    color: #cc0000; /* Darker red on hover */
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
+}
+
+.trash-icon:active {
+    transform: scale(1); /* Reset scale when clicked */
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 10px; /* Space between images */
+    padding: 20px; /* Add padding around the gallery */
+}
+
+.gallery img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr; /* 1 column for very small screens */
+    }
+}
+
+/* Popup container (hidden by default) */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+}
+
+/* Popup content (the image) */
+.popup-content {
+    margin: auto;
+    display: block;
+    max-width: 90%; /* Resize to fit the screen */
+    max-height: 90%; /* Resize to fit the screen */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #ccc;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #333;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+}
+.social-icons a:hover {
+    color: #007bff; /* Change color on hover */
+}
